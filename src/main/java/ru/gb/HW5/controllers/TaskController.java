@@ -6,7 +6,6 @@ import ru.gb.HW5.models.Task;
 import ru.gb.HW5.services.TaskService;
 
 import java.util.List;
-import java.util.Optional;
 @RestController
 @RequestMapping("/tasks")
 @AllArgsConstructor

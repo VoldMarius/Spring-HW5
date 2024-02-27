@@ -8,7 +8,8 @@ import org.springframework.data.annotation.Id;
 import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
-@Entity(name = "tasks")
+@Entity
+@Table(name = "tasks")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,9 +18,10 @@ public class Task {
     @Column(nullable = false)
     private String description;
 
+    @Column
     @Enumerated(EnumType.STRING)
     private TaskStatus status;
-
+    @Column
     private LocalDateTime dateCreate;
     public enum TaskStatus {
         NOT_STARTED, IN_PROGRESS, COMPLETED
